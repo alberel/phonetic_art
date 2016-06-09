@@ -1,3 +1,5 @@
+var Renderer = function (sentence, origin,) {
+
 for (int i = 0; i < sentence.length(); i++) {
 
   // Looking at each character one at a time
