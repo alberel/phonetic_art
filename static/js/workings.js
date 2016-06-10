@@ -1,14 +1,14 @@
 var sketch = function(p){
 
 	p.setup = function(){
-		myCanvas = createCanvas(1000, 1000);
+		p.createCanvas(1000, 1000);
 		//myCanvas = createCanvas(getElement('myContainer').width, 1000);
 		//myCanvas.parent('myContainer');
-		stroke(0);
+		p.stroke(0);
 	}
 
 	p.draw = function(){
-		background(0,0,0);
+		p.background(0,0,0);
 	}
 }
 
