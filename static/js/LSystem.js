@@ -1,36 +1,26 @@
-var LSystem = function (axiom, ruleset) {
+var LSystem = function(axiom) {
   this.axiom = axiom;
-  this.ruleset = ruleset;
   this.current = axiom;
   this.count = 0;
   this.iterationMultiplier = 5;
+  //this.CreateSentence()
 };
 
-LSystem.prototype.Setup() {
-  println("Generation " + count + ": " + current);
-}
-
-LYsystem.prototype.CreateSentence() {
-  for (var i = 0; i < axiom.length() * iterationMultiplier; i++){}
+LSystem.prototype.CreateSentence = function() {
+  for (var i = 0; i < this.axiom.length * this.iterationMultiplier; i++){
     // A StringBuffer for the “next” sentence
-    var next = new StringBuffer();
-    for (var i = 0; i < current.length(); i++) {
-      var c = current.charAt(i);
+    var next = "";
+    for (var i = 0; i < this.current.length; i++) {
+      var c = this.current.charAt(i);
       if (c == 'A') {
-        // append() instead of +=
-        next.append("AB");
+        next += "AB";
       } else if (c == 'B') {
-        next.append("A");
+        next += "AB";
       }
     }
     // StringBuffer can easily be converted
     // back to a String.
-    current = next.toString();
-    count++;
-    println("Generation " + count + ": " + current);
+    current = next;
+    println("Generation " + this.count + ": " + current);
   }
-}
-
-var Rule = function (predecessor, successor){
-  this._store = new Array(predecessor, successor);
 }
