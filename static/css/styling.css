@@ -6,11 +6,13 @@ body{
 	background-color: rgb(255,252,252);
 	padding: 0em;
 	text-align: center;
+	font-style: oblique;
+	font-variant: small-caps;
+	font-family: "Century Gothic", Arial, sans-serif;
 }
 
 h1{
-	letter-spacing: 1em;
-	text-decoration: underline;
+	letter-spacing: 0.5em;
 }
 
 button{
