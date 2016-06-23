@@ -24,7 +24,7 @@ function draw() {
     			// console.log(c);
     			if (c == 'A') {
     				translate(100,100);
-      				rect(originX, originY, 50, 50);
+      				rect(50, 50, 50, 50);
     			} else if (c == 'B') {
       				translate(0, len);
     			} else if (c == 'C') {
@@ -41,7 +41,6 @@ function draw() {
 
 		drawLSystems = false;	
 	}
-	//ellipse(100,100,100,100);
 }
 
 function CreateLSystems(rulesWords) {
