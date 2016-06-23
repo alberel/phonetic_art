@@ -1,4 +1,4 @@
-var LSystem = function LSystem(axiom) {
+var LSystem = function LSystem(axiom){
   this.axiom = axiom;
   this.current = axiom;
   this.count = 0;
@@ -8,19 +8,25 @@ var LSystem = function LSystem(axiom) {
 
 LSystem.prototype.CreateSentence = function() {
   console.log("LSystem created with axiom " + this.axiom);
-  // for (var i = 0; i < this.axiom.length * this.iterationMultiplier; i++){
-  //   var next = "";
-  //   for (var i = 0; i < this.current.length; i++) {
-  //     var c = this.current.charAt(i);
-  //     if (c == 'A') {
-  //       next += 'AB';
-  //     } else if (c == 'B') {
-  //       next += 'CB';
-  //     } else if (c == 'C') {
-  //       next += 'BA';
-  //     }
-  //   }
-  //   current = next;
-  //   println("Generation " + this.count + ": " + current);
-  // }
+  console.log("Axiom length: " + this.axiom.length);
+  for (var i = 0; i < this.axiom.length; i++){
+    console.log(i);
+    // console.log(this.count);
+    // this.count += 1;
+    var next = "";
+    for (var j = 0; j < this.current.length; j++) {
+      var c = this.current.charAt(j);
+      if (c == 'A') {
+        next += 'AB';
+      } else if (c == 'B') {
+        next += 'CB';
+      } else if (c == 'C') {
+        next += 'BA';
+      }
+    }
+    console.log("Adding: " + next);
+    this.current += next;
+    this.count ++;
+    console.log("Generation " + this.count + ": " + this.current);
+  }
 }

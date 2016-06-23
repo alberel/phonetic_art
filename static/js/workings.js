@@ -17,7 +17,6 @@ function CreateLSystems(rulesWords) {
   	for(var i = 0; i < lSystems.length; i++){
   		//console.log(rulesWords[i]);
   		lSystems[i] = new LSystem(rulesWords[i]);
-  		lSystems[i].CreateSentence();
 	}
 }
 

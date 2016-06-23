@@ -1,4 +1,4 @@
-var Renderer = function (sentence, origin){
+var Renderer = function Renderer(sentence, origin){
   this.sentence = sentence;
   this.origin = origin;
 }
