@@ -14,6 +14,6 @@ def test():
 
 @app.route('/transcribe/<text>')
 def transcribe(text):
-    return jsonify({'result': logic.phonemesToRules(logic.transcribeText(text))})
+    return jsonify(logic.phonemesToRules(logic.transcribeText(text)))
 
 app.run(host='0.0.0.0', port=8080, debug=True)

@@ -34,16 +34,12 @@ def transcribeText(text):
 		transcribedText.append(phonemeDict[word])
 	#print transcribedText
 	return transcribedText
-	
-transcribedPhrase = transcribeText("Hello! My name is James? I don't know!")
 
-def phonemesToRules(transcribedText):
+def phonemesToRules(transcribedPhrase):
 	rulesWords = []
-	for word in transcribedText:
-		rulesWord = []
+	for word in transcribedPhrase:
+		rulesWord = ""
 		for phoneme in word:
-			rulesWord.append(rulesDict[phoneme])
+			rulesWord += rulesDict[phoneme][0]
 		rulesWords.append(rulesWord)
 	return rulesWords
-
-#print phonemesToRules(transcribedPhrase)
