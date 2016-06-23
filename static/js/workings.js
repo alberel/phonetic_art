@@ -1,4 +1,5 @@
 function setup() {
+	//var myCanvas = 
 	var myCanvas = createCanvas(1000, 500);
 	myCanvas.parent('myContainer');
 	myCanvas.background(0,0,0);
@@ -6,9 +7,9 @@ function setup() {
 	fill(0,0,255);
 }
 
-function draw() {
-	ellipse(100,100,100,100);
-}
+// function draw() {
+// 	//ellipse(100,100,100,100);
+// }
 
 function CreateLSystems(rulesWords) {
 	//console.log("Length: " + rulesWords.length);

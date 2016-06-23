@@ -7,23 +7,18 @@ Renderer.prototype.Render = function() {
   for (var i = 0; i < this.sentence.length; i++) {
     // Looking at each character one at a time
     var c = this.sentence.charAt(i);
-
-    //[full] Performing the correct task for each character.
-    // This could also be written with a “case” statement,
-    // which might be nicer to look at, but leaving it as an
-    // if/else if structure helps readers not familiar with case statements.
-    if (c == 'F') {
+    if (c == 'A') {
       line(0,0,len,0);
       translate(len,0);
-    } else if (c == 'F') {
+    } else if (c == 'B') {
       translate(len,0);
-    } else if (c == '+') {
+    } else if (c == 'C') {
       rotate(theta);
-    } else if (c == '-') {
+    } else if (c == 'D') {
       rotate(-theta);
-    } else if (c == '[') {
+    } else if (c == 'E') {
       pushMatrix();
-    } else if (c == ']') {
+    } else if (c == 'F') {
       popMatrix();
     }
     //[end]
